@@ -1,0 +1,19 @@
+{
+  "name": "vitest-v8-coverage-realm-leak",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:no-coverage": "vitest run",
+    "test:v8": "vitest run --coverage.enabled --coverage.provider=v8",
+    "test:istanbul": "vitest run --coverage.enabled --coverage.provider=istanbul",
+    "repro": "node scripts/compare.mjs"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "5.0.1",
+    "@vitest/coverage-istanbul": "5.0.1",
+    "@vitest/coverage-v8": "5.0.1",
+    "playwright": "1.63.0",
+    "typescript": "^5.9.0",
+    "vitest": "5.0.1"
+  }
+}
